@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<style>
+		/* Styling the body */
+		body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.event-heading{
+    margin-left: 40px;
+    margin-top: 50px;
+    height: 100px;
+    width: 850px;
+    color: white;
+    font-size: 30px;
+    background-color: orange;
+}
+.event-heading h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+    height: 600px;
+}
+
+.caption {
+    color: #f2f2f2;
+    font-size: 18px;
+    padding: 50px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 97%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+
+		/* Styling section, giving background
+			image and dimensions */
+		section {
+			width: 100%;
+			height: 100vh;
+			
+				
+			
+		}
+
+		/* Styling the left floating section */
+		section .leftBox {
+			width: 50%;
+			height: 100%;
+			float: left;
+			padding: 50px;
+			box-sizing: border-box;
+		}
+
+		/* Styling the background of 
+			left floating section */
+		section .leftBox .content {
+			color: #fff;
+			background: orange;
+			padding: 40px;
+			transition: .5s;
+            text-align:  center;
+            
+		}
+
+		/* Styling the hover effect 
+			of left floating section */
+		section .leftBox .content:hover {
+			background: orange;
+		}
+
+		/* Styling the header of left 
+			floating section */
+		section .leftBox .content h1 {
+			margin: 0;
+			padding: 0;
+			font-size: 50px;
+			text-transform: uppercase;
+		}
+
+		/* Styling the paragraph of 
+			left floating section */
+		section .leftBox .content p {
+			margin: 10px 0 0;
+			padding: 0;
+		}
+
+		/* Styling the three events section */
+		section .events {
+			position: relative;
+			width: 50%;
+			height: 100%;
+			background: #fff;
+            
+			float: right;
+			box-sizing: border-box;
+		}
+
+		/* Styling the links of 
+		the events section */
+		section .events ul {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			margin: 0;
+			padding: 40px;
+			box-sizing: border-box;
+		}
+
+		/* Styling the lists of the event section */
+		section .events ul li {
+			list-style: none;
+			background: #fff;
+			box-sizing: border-box;
+			height: 200px;
+			margin: 15px 0;
+		}
+
+		/* Styling the time class of events section */
+		section .events ul li .time {
+			position: relative;
+			padding: 20px;
+			background: #262626;
+			box-sizing: border-box;
+			width: 30%;
+			height: 100%;
+			float: left;
+			text-align: center;
+			transition: .5s;
+		}
+
+		/* Styling the hover effect
+			of events section */
+		
+
+		/* Styling the header of time 
+			class of events section */
+		section .events ul li .time h2 {
+			position: absolute;
+			margin: 0;
+			padding: 0;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+			font-size: 60px;
+			line-height: 30px;
+		}
+
+		/* Styling the texts of time 
+		class of events section */
+		section .events ul li .time h2 span {
+			font-size: 30px;
+		}
+
+		/* Styling the details 
+		class of events section */
+		section .events ul li .details {
+			padding: 20px;
+			background: orange;
+			box-sizing: border-box;
+			width: 70%;
+			height: 100%;
+			float: left;
+		}
+
+		/* Styling the header of the 
+		details class of events section */
+		section .events ul li .details h3 {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			font-size: 22px;
+		}
+
+		/* Styling the lists of details 
+		class of events section */
+		section .events ul li .details p {
+			position: relative;
+			margin: 10px 0 0;
+			padding: 0;
+			font-size: 16px;
+		}
+
+		/* Styling the links of details
+		class of events section */
+		section .events ul li .details a {
+			display: inline-block;
+			text-decoration: none;
+			padding: 10px 15px;
+			border: 1.5px solid ;
+			margin-top: 8px;
+			font-size: 18px;
+			transition: .5s;
+		}
+
+		/* Styling the details class's hover effect */
+		
+	</style>
+</head>
+
+<body>
+	<section>
+		<div class="leftBox">
+			<div class="content">
+				<h1>
+					Our Past Events
+				</h1>
+                
+				
+			</div>
+            <div>
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="1image.jpg" alt="Image 1">
+                        <div class="caption">Our event had been conducted in Khandwa district of Madhya Pradesh where we had distributed food to the poor childrens.</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="Pic 2.jpg" alt="Image 2">
+                        <div class="caption">Our event had been conducted in Rajgarh district of Madhya Pradesh where we had distributed food to the poor childrens.</div>
+                    </div>
+                    <div class="slide fade ">
+                        <img src="60c779113adca.jpeg" alt="Image 3">
+                        <div class="caption">Our event had been conducted in Indore district of Madhya Pradesh where we had distributed food to the poor childrens.</div>
+
+                    </div>
+                    <!-- Add more slides as needed -->
+            
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <!-- Add more dots as needed -->
+                </div>
+                
+            </div>
+		</div>
+		<div class="events">
+         <div class="event-heading">
+           <h1>FUTURE EVENTS</h1>
+         </div>
+			<ul>
+				<li>
+					<div class="time">
+						<h2>
+							15 <br><span>March</span>
+						</h2>
+					</div>
+					<div class="details">
+						<h3>
+							Where is the event happening?
+						</h3>
+						<p>
+							We will be conducting our event in Rajnandgaon district of Chattisgarh where we will be distributing food to the poor childrens.Our event will also provide surity that each and every child gets food. <br>
+                            We beleive in "अनन्नमन्त्रयः सदा | सदा भवेच्छान्ति: सर्वजनस्य ||"
+						</p>
+						<a href="#">View Details</a>
+					</div>
+					<div style="clear: both;"></div>
+				</li>
+				<li>
+					<div class="time">
+						<h2>
+							27 <br><span>May</span>
+						</h2>
+					</div>
+					<div class="details">
+						<h3>
+							Where is the event happening?
+						</h3>
+						<p>
+							We will be conducting our event in Luchnow Uttar Pradesh where we will be distributing food to the poor childrens.Our event will also provide surity that each and every child gets food. <br>
+                            We beleive in "अनन्नमन्त्रयः सदा | सदा भवेच्छान्ति: सर्वजनस्य ||"
+						</p>
+						<a href="#">View Details</a>
+					</div>
+					<div style="clear:both;"></div>
+				</li>
+				<li>
+					<div class="time">
+						<h2>
+							12 <br><span>August</span>
+						</h2>
+					</div>
+					<div class="details">
+						<h3>
+							Where is the event happening?
+						</h3>
+						<p>
+							We will be conducting our event in Mumbai Maharastra where we will be distributing food to the poor childrens.Our event will also provide surity that each and every child gets food. <br>
+                            We beleive in "अनन्नमन्त्रयः सदा | सदा भवेच्छान्ति: सर्वजनस्य ||"
+						</p>
+						<a href="#">View Details</a>
+					</div>
+					<div style="clear:both;"></div>
+				</li>
+			</ul>
+		</div>
+	</section>
+</body>
+<script >
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+</script>
+
+</html>

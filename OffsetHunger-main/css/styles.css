@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('images/bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+div {
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 4vw; /* Adjusted to vw for responsiveness */
+  line-height: 1.5;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 3vw; /* Adjusted to vw for responsiveness */
+  margin: 3vh 0; /* Adjusted to vh for responsiveness */
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.container-fluid {
+  padding: 3vh 15vw; /* Adjusted to vh and vw for responsiveness */
+}
+
+.donate-button-frontpage {
+  margin-top: 5vh; /* Adjusted to vh for responsiveness */
+}
+
+.feature-div {
+  text-align: center;
+}
+
+.feature-div-icons {
+  color: #298252;
+}
+
+.feature-div-icons:hover {
+  color: #94c4a4;
+}
+
+.image-person-first {
+  border-radius: 5%;
+  width: 100%;
+  text-align: center;
+}
+
+.mission-text {
+  font-size: 1.5vw; /* Adjusted to vw for responsiveness */
+  line-height: 1.5;
+}
+
+.navbar {
+  margin-top: -6vh; /* Adjusted to vh for responsiveness */
+}
+
+.nav-item {
+  margin: 0 0.9vw; /* Adjusted to vw for responsiveness */
+  font-size: 1.2vw; /* Adjusted to vw for responsiveness */
+}
+
+.navbar-brand {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 2.5vw; /* Adjusted to vw for responsiveness */
+}
+
+.social-icon {
+  margin: 2vh 1vw; /* Adjusted to vh and vw for responsiveness */
+  color: white;
+  text-decoration: none;
+}
+
+#title {
+  color: white;
+}
+
+#features {
+  padding: 3vh 0; /* Adjusted to vh for responsiveness */
+}
+
+#mission {
+  background-color: rgb(240, 237, 231);
+  color: black;
+  text-align: center;
+}
+
+#donate {
+  text-align: center;
+}
+
+#footer {
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 5vh 15vw; /* Adjusted to vh and vw for responsiveness */
+}
+
+.logo {
+  border-radius: 50%;
+  height: 8vh; /* Adjusted to vh for responsiveness */
+  margin-right: 1.5vw; /* Adjusted to vw for responsiveness */
+}
+
+.text-overlay {
+  margin-top: 10vh; /* Adjusted to vh for responsiveness */
+  text-align: left;
+  padding: 2px;
+  margin-left: 0;
+  border-radius: 10px;
+}
+
+
+#counter-box {
+  color: white;
+  width: 100vw;
+  background: rgb(243, 187, 82);
+  height: 30vh; /* Adjusted to vh for responsiveness */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50vh; /* Adjusted to vh for responsiveness */
+  margin-bottom: 1vh; /* Adjusted to vh for responsiveness */
+  padding-bottom: 30vh; /* Adjusted to vh for responsiveness */
+}
+
+.counter {
+  height: 10vh; /* Adjusted to vh for responsiveness */
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-size: 3vw; /* Adjusted to vw for responsiveness */
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container {
+  max-width: 40vw; /* Adjusted to vw for responsiveness */
+  background-color: white;
+  margin: auto;
+  padding: 2vh 6vw 2vh 4vw; /* Adjusted to vh and vw for responsiveness */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1); /* Adjusted to vw for responsiveness */
+}
+
+.form-group {
+  margin-bottom: 1.5vh; /* Adjusted to vh for responsiveness */
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5vh; /* Adjusted to vh for responsiveness */
+}
+
+input[type="text"], select {
+  width: 100%;
+  padding: 1vh; /* Adjusted to vh for responsiveness */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1vh 2vw; /* Adjusted to vh and vw for responsiveness */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 5vh; /* Adjusted to vh for responsiveness */
+  margin: 0 40%;
+  font-size: larger;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2vh; /* Adjusted to vh for responsiveness */
+}
+
+.radio-group label {
+  cursor: pointer;
+}
+
+#donorCity, #donorState {
+  display: inline;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-container {
+  width: 80vw; /* Adjusted to vw for responsiveness */
+  max-width: 60vw; /* Adjusted to vw for responsiveness */
+  margin: 5vh auto; /* Adjusted to vh for responsiveness */
+  padding: 2vh; /* Adjusted to vh for responsiveness */
+  background-color: #fff;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1); /* Adjusted to vw for responsiveness */
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh; /* Adjusted to vh for responsiveness */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vw; /* Adjusted to vw for responsiveness */
+}
+
+.contact-icon {
+  width: 5vw; /* Adjusted to vw for responsiveness */
+  height: 5vw; /* Adjusted to vw for responsiveness */
+}
+
+.contact-details {
+  text-align: left;
+}
+
+.contact-details p {
+  margin: 0.5vh 0; /* Adjusted to vh for responsiveness */
+}
+
+.contact-details strong {
+  display: block;
+  font-weight: bold;
+}
